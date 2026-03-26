@@ -1,114 +1,219 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
-  <title>Coursera Support</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bcchous Blog</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ===== BACKGROUND ===== */
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f6f9;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+    }
+
+    /* ===== NAVBAR UPDATED ===== */
+    .navbar {
       display: flex;
-      justify-content: center;
-      padding: 40px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 24px;      
+      letter-spacing: 1px;
+      background: linear-gradient(45deg, #fff, #093643);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .menu a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: white;
+      font-size: 0.95rem;
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: #00c6ff;
+      opacity: 1;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 10%;
+      flex-wrap: wrap;
+    }
+
+    /* text */
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      opacity: 0.8;
+      margin-bottom: 25px;
+    }
+
+    /* button */
+    .btn {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(0, 198, 255, 0.7);
+    }
+
+    /* avatar */
+    .avatar {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 0 40px rgba(0, 198, 255, 0.6);
+      transition: 0.4s;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .avatar:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== BLOG SECTION ===== */
+    .section {
+      padding: 60px 10%;
+    }
+
+    .section h2 {
+      margin-bottom: 30px;
+    }
+
+    /* cards */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
 
     .card {
-      background: white;
-      max-width: 600px;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      line-height: 1.6;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 20px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      transition: 0.3s;
     }
 
-    h1 {
-      color: #2c3e50;
-      font-size: 22px;
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
 
-    .highlight {
-      color: #e74c3c;
-      font-weight: bold;
-    }
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
 
-    ul {
-      margin-left: 20px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    .contact {
-      background: #ecf9ff;
-      padding: 10px;
-      border-radius: 10px;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-
-    .commit {
-      margin-top: 15px;
-      padding: 15px;
-      border-radius: 10px;
-      background: #f0fff4;
-    }
-
-    .commit p {
-      margin: 5px 0;
-    }
-
-    .button {
-      display: block;
-      margin-top: 20px;
-      text-align: center;
-      background: #3498db;
-      color: white;
-      padding: 12px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .button:hover {
-      background: #2980b9;
+      .avatar {
+        margin-top: 30px;
+      }
     }
   </style>
+
 </head>
+
 <body>
 
-<div class="card">
-  <h1>😵‍💫 Spring 2026 - Coursera dí deadline? Đừng lo!</h1>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="logo">Bcchous</div>
+    <div class="menu">
+      <a href="index.html">Home</a>
 
-  <p>
-    Nếu bạn đang cần một giải pháp hỗ trợ Coursera nhanh – an toàn – đúng tiến độ 
-    với giá <span class="highlight">“hạt dẻ”</span>, thì alo mình giúp liền 🙋‍♀️
-  </p>
-
-  <p>
-    Mình hiện đang hỗ trợ sinh viên FPTU ở tất cả các Campus rush các khóa học Coursera theo yêu cầu.
-  </p>
-
-  <p><strong>Đặc biệt phù hợp cho:</strong></p>
-  <ul>
-    <li>👉 Các bạn lần đầu học Coursera còn bỡ ngỡ</li>
-    <li>👉 Các bạn cần người tư vấn, giải đáp từ A–Á</li>
-    <li>👉 Các bạn đang bị deadline “rượt không kịp thở” 🏃‍♂️💨</li>
-  </ul>
-
-  <div class="contact">
-    📞 Cần tư vấn nhanh gọn → liên hệ mình qua: <strong>Phở Bò</strong>
+      <a href="#">Feedback</a>
+    </div>
   </div>
 
-  <div class="commit">
-    <p>✨ <strong>CAM KẾT CỰC MẠNH</strong> ✨</p>
-    <p>✅ Hoàn thành FULL khóa học + 1 BONUS trước deadline</p>
-    <p>✅ Không đạo văn – không dính cờ – an toàn tài khoản</p>
-    <p>✅ Làm việc rõ ràng, hỗ trợ nhiệt tình tới lúc xong việc</p>
-  </div>
+  <!-- HERO -->
+  <section class="hero">
 
-  <a href="#" class="button">🚀 Điền form để được hỗ trợ ngay</a>
-</div>
+    <div class="hero-text">
+      <h1>Welcome to<br>Bcchous's Home</h1>
+      <p>No comment</p>
+      <button class="btn">View My Projects</button>
+    </div>
 
+    <div class="avatar">
+      <img src="avatar1.jpg" alt="avatar">      
+    </div>
+
+  </section>
+
+  <!-- BLOG -->
+  <section class="section">
+    <h2>My services</h2>
+
+    <div class="blog-grid">
+
+      <div class="card" onclick="location.href='coursera.html'" style="cursor:pointer;">
+        <h3>Coursera</h3>
+        <p>Rush Coursera với giá rẻ?</p>
+      </div>
+
+      <div class="card" onclick="location.href='code.html'" style="cursor:pointer;">
+        <h3>Code</h3>
+        <p>Hỗ trợ code</p>
+      </div>
+
+      <div class="card">
+        <h3>Sources</h3>
+        <p>???</p>
+      </div>
+
+    </div>
+  </section>
 </body>
+
 </html>
